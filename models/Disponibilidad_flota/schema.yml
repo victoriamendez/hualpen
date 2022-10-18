@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: taller
+    description:  sistema origen
+    database: datawarehouse
+    schema: taller
+    tables:
+    - name: tb_ta_marca_vehiculo
+
+  

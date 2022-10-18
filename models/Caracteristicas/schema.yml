@@ -1,0 +1,56 @@
+version: 2
+
+sources:
+  - name: taller
+    description:  sistema origen
+    database: datawarehouse
+    schema: taller
+    tables:
+    - name: tb_ta_vehiculo_caracteristica
+      description: caracteristicas de los vehiculos de la flota
+      columns:
+        - name: vec_id
+          description: id del valor o atributo de la caracteristica
+        - name: car_id
+          description: id de la caracteristica
+        - name: id_vehiculo
+          description: id identificador del vehiculo en la flota 
+        - name: vec_valor
+          description: valor que toma el atributo de x caracteristica
+        - name: vec_fecha_hora_creacion
+          description: fecha de creación del atributo de la caracteristica
+    - name: tb_ta_caracteristica
+      description: diccionario de las caracteristicas cargadas en el mantenedor
+      columns:
+        - name: car_id
+          description: id de la caracteristica
+        - name: cat_id
+          description: dominio
+        - name: cad_is
+          description: tipo de variable que posee la caracteristica
+        - name: cae_id 
+          description: --
+        - name: car_nombre
+          description: nombre de la caracteristica
+        - name: car_fecha_hora_creacion
+          description: hora de ingreso de la caracteristica
+    - name: tb_ta_caracteristica_dominio 
+      description: tipo de caracteristica 
+      columns:
+        - name: cad_id
+          description: tipo de variable que posee la caracteristica
+        - name: cad_nombre
+          description: nombre del tipo de variable que posee la caracteristica
+        - name: cad_fecha_hora_creacion
+          description: fecha de la creación del atributo
+    - name: tb_ta_caracteristica_opcion 
+      description: lista de atributos por 
+      columns:
+        - name: cao_id
+          description: id del atributo/caracteristica
+        - name: car_id 
+          description: id de la caracteristica
+        - name: cao_name
+          description: nombre del atributo dentro de la caracteristica
+        - name: cao_fecha_hora_creacion
+          description: fecha de la creación del atributo
